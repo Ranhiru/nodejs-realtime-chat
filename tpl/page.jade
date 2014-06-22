@@ -2,11 +2,25 @@ doctype html
 html
   head
     title="Real time web chat"
+    meta(name='viewport' content='width=device-width,initial-scale=1')
     script(src='/chat.js')
     script(src='/socket.io/socket.io.js')
+    script(src='//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js')
+    script(src='//cdnjs.cloudflare.com/ajax/libs/knockout/3.1.0/knockout-min.js')
+    script(src='//netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js')
+    link(rel='stylesheet' href='//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css')
+    link(rel='stylesheet' href='//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap-theme.min.css')
+
   body
-    #content(style='width: 500px; height: 300px; margin: 0 0 20px 0; border: solid 1px #999; overflow-y: scroll;')
-    .controls
-      input.field(style='width: 100px;', id='username')
-      input.field(style='width: 350px;', id='field')
-      input.send(type='button', value='Send', id='send')
+    div.container-fluid
+      div.row
+        div.col-xs-12.col-md-12
+          #content(style='overflow-y: scroll; border: solid 3px black; height:95vh; border-radius: 10px;')
+      div.row
+        div.col-md-2
+          input.field(id='username' class="form-control" placeholder='Enter your name')
+        div.col-md-2
+          input.field(id='field' class="form-control" placeholder='Enter your message')
+        div.col-md-2
+          input.send(type='button', value='Send', id='send' class='btn btn-primary')
+        div.col-md-6
