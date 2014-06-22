@@ -13,14 +13,13 @@ html
 
   body
     div.container-fluid
-      div.row
+      div.row(style='margin-top: 10px')
         div.col-xs-12.col-md-12
-          #content(style='overflow-y: scroll; border: solid 3px black; height:95vh; border-radius: 10px;')
-      div.row
+          #content(style='overflow-y: scroll; border: solid 3px black; height:90vh; border-radius: 10px; padding: 10px')
+      div.row(style='margin-top: 10px')
         div.col-md-2
           input.field(id='username' class="form-control" placeholder='Enter your name')
-        div.col-md-2
+        div.col-md-9
           input.field(id='field' class="form-control" placeholder='Enter your message')
-        div.col-md-2
-          input.send(type='button', value='Send', id='send' class='btn btn-primary')
-        div.col-md-6
+        div.col-md-1
+          input.send(type='button', value='Send', id='send' class='btn btn-primary btn-block')
